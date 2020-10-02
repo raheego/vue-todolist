@@ -1,7 +1,7 @@
 <template>
     <div class="inputBox shadow">
         <input type="text" v-model="newTodoItem" placeholder="입력해주세요." v-on:keypress.enter="addTodo">
-        <button v-on:click="addTodo">+</button>
+        <button v-on:click="addTodo" class="bt_add">+</button>
     </div>
 </template>
 
@@ -42,7 +42,7 @@ input:focus {
   border-style: none;
   font-size: 0.9rem;
 }
-button {
+.bt_add {
     display:block;
     float:right;
     height:100%;
