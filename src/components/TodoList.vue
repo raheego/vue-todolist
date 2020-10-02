@@ -1,14 +1,14 @@
 <template>
     <section>
         <ul>
-            <li v-for="todoItem in todoItems">{{ todoItem }}</li>
+            <li v-for="todoItem in todoItems" v-bind:key="todoItem" >{{ todoItem }}</li>
         </ul>
     </section>
 </template>
 
 <script>
 export default {
-    data(){
+   data(){
         return {
             todoItems: []
         }
