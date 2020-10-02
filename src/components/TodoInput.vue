@@ -1,4 +1,3 @@
-
 <template>
     <div class="inputBox shadow">
         <input type="text" v-model="newTodoItem" placeholder="입력해주세요." v-on:keypress.enter="addTodo">
@@ -7,7 +6,6 @@
 </template>
 
 <script>
-
 export default {
     data(){
         return {
@@ -18,7 +16,6 @@ export default {
         addTodo(){
             //inputbox 빈값인지 체크, 빈값이 아니면 로직 수행
             if(this.newTodoItem !== ''){
-                
                 var value = this.newTodoItem && this.newTodoItem.trim();
                 localStorage.setItem(value, value);
                 this.clearInputbox();
@@ -46,6 +43,7 @@ input:focus {
   font-size: 0.9rem;
 }
 button {
+    display:block;
     float:right;
     height:100%;
     background: linear-gradient(90deg,#6478fb,#8763fb);
