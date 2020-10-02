@@ -1,13 +1,13 @@
 <template>
     <div class="inputBox shadow">
-        <input type="text" v-model="newTodoItem" placeholder="입력해주세요." v-on:keypress.enter="addTodo">
+        <input type="text" v-model="newTodoItem" placeholder="입력해주세요." v-on:keyup.enter="addTodo">
         <button v-on:click="addTodo" class="bt_add">+</button>
     </div>
 </template>
 
 <script>
 export default {
-    data(){
+   data(){
         return {
             newTodoItem: ''
         }
@@ -31,30 +31,5 @@ export default {
 </script>
 
 <style scope>
-input:focus {
-  outline: none;
-}
-.inputBox {
-  background: white;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 5px;
-}
-.inputBox input {
-  border-style: none;
-  font-size: 0.9rem;
-}
-.bt_add {
-    display:block;
-    float:right;
-    height:100%;
-    background: linear-gradient(90deg,#6478fb,#8763fb);
-    display: inline-block;
-    width: 3rem;
-    border-radius: 0 5px 5px 0;
-    border:0;
-    color:#fff;
-    font-weight:900;
-    font-size:20px;
-}
+
 </style>

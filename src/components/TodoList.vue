@@ -1,10 +1,9 @@
 <template>
     <section>
         <ul>
-            <!-- <li v-for="(todoItem, index) in todoItems" :key="todoItem" > -->
             <li v-for="(todoItem, index) in propsdata" :key="todoItem">
                 {{ todoItem }}
-                <button type="button" v-on:click="removeTodo(todoItem, index)">삭제</button>
+                <button type="button" v-on:click="removeTodo(todoItem, index)" class="bt_delelte">삭제</button>
             </li>
         </ul>
     </section>

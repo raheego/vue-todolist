@@ -32,7 +32,7 @@ export default {
             localStorage.setItem(todoItem, todoItem);
             this.todoItems.push(todoItem);
         },
-        removeTodo(){
+       removeTodo(todoItem, index){ //메서드도 가져오기
             localStorage.removeItem(todoItem);
             this.todoItems.splice(index, 1);
         },

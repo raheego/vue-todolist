@@ -16,6 +16,7 @@ export default {
     methods: {
         clearTodo(){
             this.$emit('removeAll');
+            // 하위->상위 이벤트 발생 
         }    
     }
 }
