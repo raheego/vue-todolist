@@ -6,14 +6,17 @@
 
 <script>
 export default {
+    /*
     methods: {
         clearTodo(){
             localStorage.clear();
         }
     }
+    */
+    methods: {
+        clearTodo(){
+            this.$emit('removeAll');
+        }    
+    }
 }
 </script>
-
-<style>
-
-</style>
