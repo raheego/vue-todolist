@@ -1,10 +1,10 @@
 <template>
     <section>
         <ul>
-           <!-- <li v-for="(todoItem, index) in todoItems" :key="todoItem" > -->
+            <!-- <li v-for="(todoItem, index) in todoItems" :key="todoItem" > -->
             <li v-for="(todoItem, index) in propsdata" :key="todoItem">
                 {{ todoItem }}
-                <button v-on:click="removeTodo(todoItem, index)">삭제</button>
+                <button type="button" v-on:click="removeTodo(todoItem, index)">삭제</button>
             </li>
         </ul>
     </section>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    /*
+      /*
     data(){
         return {
             todoItems: []
@@ -28,15 +28,10 @@ export default {
     */
     //props속성 추가
     props: ['propsdata'],
-    methods:{
-        removeTodo(todoItem, index){
+    methods: {
+    	removeTodo(todoItem, index){
             this.$emit('removeTodo', todoItem, index);
         }
-    }
+    }    
 }
 </script>
-
-<style scope>
-
-
-</style>

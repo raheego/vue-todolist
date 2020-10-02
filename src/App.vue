@@ -1,5 +1,3 @@
-<!-- /src/App.vue -->
-
 <template>
     <div id="app">
         <TodoHeader></TodoHeader>
@@ -16,7 +14,6 @@ import TodoList from './components/TodoList';
 import TodoFooter from './components/TodoFooter';
 
 export default {
-    // 데이터 속서어 todoItems 선언
     data(){
         return {
             todoItems: []
@@ -29,10 +26,9 @@ export default {
             }
         }
     },
-
-    methods:{
-        addTodo(){
-            //로컬 스토리지에 데이터를 추가하는 로직
+    methods: {
+        addTodo(todoItem){
+            //로컬스토리지에 데이터를 추가하는 로직
             localStorage.setItem(todoItem, todoItem);
             this.todoItems.push(todoItem);
         },
@@ -45,29 +41,12 @@ export default {
             localStorage.clear();
             this.todoItems = [];
         }
-    },
+    },    
     components: {
-      'TodoHeader': TodoHeader,
-      'TodoInput': TodoInput,
-      'TodoList': TodoList,
-      'TodoFooter': TodoFooter
+        'TodoHeader': TodoHeader,
+        'TodoInput': TodoInput,
+        'TodoList': TodoList,
+        'TodoFooter': TodoFooter
     }
 }
 </script>
-
-<style>
-    body {
-        text-align: center;
-        background-color: #f6f6f8;
-    }
-    input {
-        border-style:groove;
-        width:200px;
-    }
-    button {
-        border-style: groove;
-    }
-    .shadow {
-        box-shadow: 5px 10px 10px rgba(0,0,0,0.03);
-    }
-</style>
